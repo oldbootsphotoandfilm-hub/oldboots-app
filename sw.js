@@ -2,7 +2,7 @@
    - a página do app (vinda do GitHub) e os ficheiros fixos ficam guardados no aparelho: o app abre logo;
    - por trás, vai buscar a versão mais recente; se mudou, guarda-a e avisa a página («Há uma versão nova · Atualizar»);
    - os dados (servidor do Google) nunca passam por aqui: vêm sempre frescos. */
-const V = 'ob-app-v1', CASCA = ['/', '/index.html', '/manifest.webmanifest', '/icone-180.png', '/icone-192.png', '/icone-512.png'];
+const V = 'ob-app-v2', CASCA = ['/', '/index.html', '/manifest.webmanifest', '/icone-180.png', '/icone-192.png', '/icone-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(CASCA)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(l => Promise.all(l.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 const PAGINAS = /^https:\/\/oldbootsphotoandfilm-hub\.github\.io\/oldboots-site\/(paginas\/[\w-]+\.html|carregar\.js)/;
