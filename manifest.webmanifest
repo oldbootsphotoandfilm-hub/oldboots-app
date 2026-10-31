@@ -1,0 +1,17 @@
+{
+  "name": "Bastidores · Old Boots",
+  "short_name": "Bastidores",
+  "description": "Gestão da Old Boots: clientes, orçamentos, pagamentos, produção e propostas.",
+  "lang": "pt-PT",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#454205",
+  "theme_color": "#454205",
+  "icons": [
+    { "src": "/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icone-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icone-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
